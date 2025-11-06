@@ -118,6 +118,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = Color.Aqua;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(29, 225);
             dataGridView1.Name = "dataGridView1";
@@ -263,6 +264,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.WhiteSmoke;
             ClientSize = new Size(1052, 636);
             Controls.Add(label8);
             Controls.Add(txtSearch);
