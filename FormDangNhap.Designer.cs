@@ -54,7 +54,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.PaleGreen;
+            panel1.BackColor = Color.Aqua;
             panel1.Controls.Add(label1);
             panel1.ForeColor = Color.Black;
             panel1.Location = new Point(391, -1);
@@ -132,6 +132,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.WhiteSmoke;
             ClientSize = new Size(1052, 575);
             Controls.Add(btnThoat);
             Controls.Add(txtPass);
