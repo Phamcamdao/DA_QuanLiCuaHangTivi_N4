@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNhanVien));
             label1 = new Label();
             txtManv = new TextBox();
-            textBox2 = new TextBox();
             label3 = new Label();
             textBox4 = new TextBox();
             label4 = new Label();
@@ -53,6 +52,7 @@
             xoáToolStripMenuItem = new ToolStripMenuItem();
             menuXoatrang = new ToolStripMenuItem();
             menuThoat = new ToolStripMenuItem();
+            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -61,7 +61,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            label1.Location = new Point(29, 37);
+            label1.Location = new Point(29, 92);
             label1.Name = "label1";
             label1.Size = new Size(116, 22);
             label1.TabIndex = 0;
@@ -70,24 +70,16 @@
             // txtManv
             // 
             txtManv.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            txtManv.Location = new Point(170, 37);
+            txtManv.Location = new Point(170, 84);
             txtManv.Name = "txtManv";
             txtManv.Size = new Size(234, 30);
             txtManv.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            textBox2.Location = new Point(706, 37);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(169, 30);
-            textBox2.TabIndex = 1;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            label3.Location = new Point(565, 45);
+            label3.Location = new Point(565, 87);
             label3.Name = "label3";
             label3.Size = new Size(68, 22);
             label3.TabIndex = 0;
@@ -96,16 +88,17 @@
             // textBox4
             // 
             textBox4.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            textBox4.Location = new Point(706, 37);
+            textBox4.Location = new Point(706, 81);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(234, 30);
+            textBox4.Size = new Size(250, 30);
             textBox4.TabIndex = 1;
+            textBox4.TextChanged += textBox4_TextChanged;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            label4.Location = new Point(29, 90);
+            label4.Location = new Point(29, 136);
             label4.Name = "label4";
             label4.Size = new Size(120, 22);
             label4.TabIndex = 0;
@@ -114,7 +107,7 @@
             // txtTennv
             // 
             txtTennv.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            txtTennv.Location = new Point(170, 87);
+            txtTennv.Location = new Point(170, 128);
             txtTennv.Name = "txtTennv";
             txtTennv.Size = new Size(234, 30);
             txtTennv.TabIndex = 1;
@@ -123,7 +116,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            label5.Location = new Point(565, 93);
+            label5.Location = new Point(565, 131);
             label5.Name = "label5";
             label5.Size = new Size(114, 22);
             label5.TabIndex = 0;
@@ -133,16 +126,16 @@
             // textBox6
             // 
             textBox6.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            textBox6.Location = new Point(706, 90);
+            textBox6.Location = new Point(706, 123);
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(234, 30);
+            textBox6.Size = new Size(250, 30);
             textBox6.TabIndex = 1;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            label2.Location = new Point(29, 136);
+            label2.Location = new Point(29, 179);
             label2.Name = "label2";
             label2.Size = new Size(81, 22);
             label2.TabIndex = 0;
@@ -152,7 +145,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            label6.Location = new Point(565, 136);
+            label6.Location = new Point(565, 175);
             label6.Name = "label6";
             label6.Size = new Size(88, 22);
             label6.TabIndex = 0;
@@ -163,7 +156,7 @@
             // 
             rdaNam.AutoSize = true;
             rdaNam.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            rdaNam.Location = new Point(143, 132);
+            rdaNam.Location = new Point(145, 175);
             rdaNam.Name = "rdaNam";
             rdaNam.Size = new Size(68, 26);
             rdaNam.TabIndex = 2;
@@ -175,7 +168,7 @@
             // 
             rdaNu.AutoSize = true;
             rdaNu.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            rdaNu.Location = new Point(255, 132);
+            rdaNu.Location = new Point(255, 175);
             rdaNu.Name = "rdaNu";
             rdaNu.Size = new Size(56, 26);
             rdaNu.TabIndex = 2;
@@ -186,24 +179,25 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(29, 164);
+            dataGridView1.Location = new Point(29, 219);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1011, 355);
+            dataGridView1.Size = new Size(1000, 355);
             dataGridView1.TabIndex = 3;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(706, 130);
+            dateTimePicker1.Location = new Point(706, 170);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(250, 27);
             dateTimePicker1.TabIndex = 4;
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            label7.Location = new Point(614, 538);
+            label7.Location = new Point(600, 591);
             label7.Name = "label7";
             label7.Size = new Size(151, 22);
             label7.TabIndex = 0;
@@ -213,7 +207,7 @@
             // btnTim
             // 
             btnTim.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            btnTim.Location = new Point(946, 527);
+            btnTim.Location = new Point(935, 580);
             btnTim.Name = "btnTim";
             btnTim.Size = new Size(94, 44);
             btnTim.TabIndex = 5;
@@ -223,7 +217,7 @@
             // txtSearch
             // 
             txtSearch.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            txtSearch.Location = new Point(771, 535);
+            txtSearch.Location = new Point(757, 588);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(169, 30);
             txtSearch.TabIndex = 6;
@@ -279,12 +273,23 @@
             menuThoat.Size = new Size(89, 26);
             menuThoat.Text = "Thoát";
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Times New Roman", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            label8.Location = new Point(348, 30);
+            label8.Name = "label8";
+            label8.Size = new Size(321, 38);
+            label8.TabIndex = 8;
+            label8.Text = "Danh mục nhân viên";
+            // 
             // FormNhanVien
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DeepSkyBlue;
-            ClientSize = new Size(1052, 575);
+            ClientSize = new Size(1052, 636);
+            Controls.Add(label8);
             Controls.Add(txtSearch);
             Controls.Add(btnTim);
             Controls.Add(dateTimePicker1);
@@ -298,7 +303,6 @@
             Controls.Add(textBox4);
             Controls.Add(label3);
             Controls.Add(txtTennv);
-            Controls.Add(textBox2);
             Controls.Add(label2);
             Controls.Add(label4);
             Controls.Add(txtManv);
@@ -317,7 +321,6 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox2;
         private TextBox txtManv;
         private Label label3;
         private TextBox textBox4;
@@ -340,5 +343,6 @@
         private ToolStripMenuItem xoáToolStripMenuItem;
         private ToolStripMenuItem menuXoatrang;
         private ToolStripMenuItem menuThoat;
+        private Label label8;
     }
 }
