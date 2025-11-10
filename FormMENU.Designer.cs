@@ -127,6 +127,7 @@
             thêmToolStripMenuItem.Name = "thêmToolStripMenuItem";
             thêmToolStripMenuItem.Size = new Size(67, 24);
             thêmToolStripMenuItem.Text = "Thêm ";
+            thêmToolStripMenuItem.Click += thêmToolStripMenuItem_Click;
             // 
             // sửaToolStripMenuItem
             // 
@@ -148,6 +149,7 @@
             thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
             thoátToolStripMenuItem.Size = new Size(64, 24);
             thoátToolStripMenuItem.Text = "Thoát";
+            thoátToolStripMenuItem.Click += thoátToolStripMenuItem_Click;
             // 
             // dataGridView1
             // 

@@ -16,5 +16,15 @@ namespace DA_QuanLiCuaHangTivi
         {
             InitializeComponent();
         }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
